@@ -666,7 +666,24 @@ strong {
   position:relative;
 }
 .table-responsive {
-	filter: drop-shadow(2px 2px 4px #606060);
+    overflow-x: auto;
+}
+
+.schedule-table th,
+.schedule-table td {
+    white-space: nowrap;
+}
+
+.schedule-table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+}
+
+.schedule-table td,
+.schedule-table th {
+    text-align: left;
+    margin-bottom: 10px;
 }
 
 .schedule-table {
